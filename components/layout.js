@@ -44,7 +44,7 @@ export default function Layout({ children }) {
           width={96}
           alt={name}
         />
-        <h1 className={utilStyles.headingSm}>{name}</h1>
+        <h1 className={utilStyles.headingName}>{name}</h1>
 
         <div className={styles.socialLinks}>
           <a href="https://www.linkedin.com/in/noahrbhansen/" target="_blank" rel="noopener noreferrer">

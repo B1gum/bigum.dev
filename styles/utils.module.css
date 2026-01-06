@@ -32,6 +32,13 @@
   margin: 0.25rem 0;
 }
 
+.headingName {
+  font-size: 1.0rem;
+  line-height: 1.6;
+  margin: 0.25rem 0;
+  color: #331a00;
+}
+
 .borderCircle {
   border-radius: 9999px;
 }

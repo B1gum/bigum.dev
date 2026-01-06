@@ -4,6 +4,7 @@ import rehypeKatex from 'rehype-katex'
 
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  trailingSlash: true,
 }
 
 export default createMDX({
