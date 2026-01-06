@@ -7,12 +7,15 @@ import 'katex/dist/katex.min.css'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+
+
 export default function App({ Component, pageProps }) {
   const { pathname } = useRouter()
 
   const isBlogIndex  = pathname === '/'
   const isNotesIndex = pathname === '/notes'
-  const showLayout   = isBlogIndex || isNotesIndex
+  const isTungsten   = pathname.startsWith('/tungsten')
+  const showLayout   = isBlogIndex || isNotesIndex || isTungsten
 
   const mdxComponents = useMDXComponents({})
 
