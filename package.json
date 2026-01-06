@@ -16,7 +16,7 @@
     "framer-motion": "^12.9.2",
     "gray-matter": "^4.0.3",
     "katex": "^0.16.22",
-    "next": "latest",
+    "next": "15.5.8",
     "next-mdx-remote": "^5.0.0",
     "react": "latest",
     "react-dom": "latest",
