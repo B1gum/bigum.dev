@@ -19,6 +19,7 @@ export default function Layout({ children }) {
         <meta
           name="description"
           content="Personal blog detailing all the little projects i am working on. Audio Engineering. Mechanical Engineering. Programming."
+          key="description"
         />
         <meta property="og:image" content={`https://og-image.vercel.app/${encodeURI(
           siteTitle,
@@ -62,7 +63,7 @@ export default function Layout({ children }) {
         </div>
 
         <p className={styles.description}>
-          Mechanical Engineering student at Aarhus University. Interested in vim, software development and guitar pedals.
+          Mechanical Engineering student at Aarhus University. Developer and maintainer of Tungsten. Top-25 national Tetr.io player.
         </p>
 
         <TabMenu />

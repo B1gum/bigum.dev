@@ -26,31 +26,49 @@ export async function getStaticProps({ params }) {
 
 export default function Post({ postData }) {
   return (
-  <>
-    <Head>
-      <title>{postData.title} | B1gum.dev</title>
-    </Head>
-    <div className={styles.postContainer}>
-      <div className={styles.postHeader}>
-        <Link href="/" className={styles.homeButton}>
-          Home
-        </Link>
-        <div className={styles.meta}>
-          <Date dateString={postData.date} /> • {postData.readingTime}
+    <>
+      <Head>
+        <title>{postData.title} | B1gum.dev</title>
+        
+        {postData.description && (
+          <meta 
+            name="description" 
+            content={postData.description} 
+            key="description"  
+          />
+        )}
+
+        {postData.tags && (
+          <meta name="keywords" content={postData.tags.join(', ')} />
+        )}
+
+        <meta property="og:title" content={postData.title} />
+        {postData.description && (
+          <meta property="og:description" content={postData.description} />
+        )}
+      </Head>
+
+      <div className={styles.postContainer}>
+        <div className={styles.postHeader}>
+          <Link href="/" className={styles.homeButton}>
+            Home
+          </Link>
+          <div className={styles.meta}>
+            <Date dateString={postData.date} /> • {postData.readingTime}
+          </div>
         </div>
+        <hr className={styles.divider} />
+
+        <article className={utilStyles.article}>
+          <h1 className={styles.postTitle}>{postData.title}</h1>
+
+          <div className={styles.postText}>
+            <MDXWrapper>
+              <MDXRemote {...postData.mdxSource} />
+            </MDXWrapper>
+          </div>
+        </article>
       </div>
-      <hr className={styles.divider} />
-
-      <article className={utilStyles.article}>
-        <h1 className={styles.postTitle}>{postData.title}</h1>
-
-        <div className={styles.postText}>
-          <MDXWrapper>
-            <MDXRemote {...postData.mdxSource} />
-          </MDXWrapper>
-        </div>
-      </article>
-    </div>
-  </>
+    </>
   )
 }

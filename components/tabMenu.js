@@ -19,7 +19,7 @@ export default function TabMenu() {
         Lecture Notes
       </Link>
       <Link href="/tungsten" className={isTungsten ? styles.active : ''}>
-        Tungsten
+        Tungsten Docs
       </Link>
     </nav>
   )
