@@ -63,7 +63,7 @@ export default function Layout({ children }) {
         </div>
 
         <p className={styles.description}>
-          Mechanical Engineering student at Aarhus University. Developer and maintainer of Tungsten. Top-25 national Tetr.io player.
+          Mechanical Engineering student at Aarhus University. Developer and maintainer of Tungsten. Top-15 national Tetr.io player.
         </p>
 
         <TabMenu />

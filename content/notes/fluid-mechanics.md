@@ -7,4 +7,3 @@ studyYear:      "2025"
 semester:       "B3"
 ects:           10
 ---
-
